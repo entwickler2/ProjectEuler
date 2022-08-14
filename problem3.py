@@ -28,14 +28,14 @@ class Problem3(AbsProblem):
         return True
 
     def __findDividers(self, num):
-        arr = range(2, num)
+        arr = range(3, int(num**0.5), 2)
         for a in arr:
             if (num % a == 0):
-                print(a)
+                #print(a)
                 self.dividers.append(a)
                 if (len(self.dividers) > 0):
                     if (num / a == self.dividers[0]):
-                        print("end")
+                        #print("end")
                         return 1
         return 1
 

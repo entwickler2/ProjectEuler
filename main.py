@@ -1,10 +1,16 @@
+from time import time
 from ProjectEuler import ProjectEuler
 
 pe = ProjectEuler()
-
-for problem in pe.suite:
-    print("---------------------------")
-    problemDesc = problem.getinfo
+print("---------------------------")
+print("Project Euler")
+print("solved problems: %d" % len(pe.suite))
+print("---------------------------")
+for prob in pe.suite:
+    problemDesc = prob.getinfo
     print(problemDesc)
-    problemResult = problem.result()
+    start = time()
+    problemResult = prob.result()
     print("RESULT: " + str(problemResult))
+    print("Elapsed time: %f seconds" % (time() - start))
+    print("---------------------------")
