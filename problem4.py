@@ -1,7 +1,8 @@
 from Problem import AbsProblem
 
 class Problem4(AbsProblem):
-    details = "A palindromic number reads the same both ways. " \
+    details = "Project Euler. Problem 4:\n" \
+              "A palindromic number reads the same both ways. " \
               "The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.\n" \
               ">>Find the largest palindrome made from the product of two 3-digit numbers."
 
