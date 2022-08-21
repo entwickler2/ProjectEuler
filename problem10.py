@@ -26,6 +26,3 @@ class Problem10(AbsProblem, ABC):
                 primes[p*p:Num:p] = removeIndexes
             p += 1
         return sum(primes)
-
-#pr = Problem10()
-#print(pr.getinfo)

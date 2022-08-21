@@ -6,6 +6,7 @@ print("---------------------------")
 print("Project Euler")
 print("solved problems: %d" % len(pe.suite))
 print("---------------------------")
+totalStart = time()
 for prob in pe.suite:
     problemDesc = prob.getinfo
     print(problemDesc)
@@ -14,3 +15,4 @@ for prob in pe.suite:
     print("RESULT: " + str(problemResult))
     print("Elapsed time: %f seconds" % (time() - start))
     print("---------------------------")
+print("TOTAL ELAPSED TIME: %f seconds" % (time() - totalStart))

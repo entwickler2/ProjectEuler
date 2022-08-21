@@ -8,6 +8,7 @@ from problem7 import Problem7
 from problem8 import Problem8
 from problem9 import Problem9
 from problem10 import Problem10
+from problem11 import Problem11
 from problem15 import Problem15
 
 
@@ -25,5 +26,6 @@ class ProjectEuler:
         self.suite.append(Problem8())
         self.suite.append(Problem9())
         self.suite.append(Problem10())
+        self.suite.append(Problem11())
         #
         self.suite.append(Problem15())
