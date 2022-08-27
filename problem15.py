@@ -8,14 +8,14 @@ class Problem15(AbsProblem):
               "there are exactly 6 routes to the bottom right corner.\n" \
               ">>How many such routes are there through a 20×20 grid?"
 
-    gridNodeSide = 20
+    __gridNodeSide = 20
 
     @property
     def getinfo(self):
         return self.details
 
     def result(self):
-        result = math.factorial(self.gridNodeSide*2)/\
-                 (math.factorial(self.gridNodeSide)*math.factorial(self.gridNodeSide*2-self.gridNodeSide))
+        result = math.factorial(self.__gridNodeSide * 2) / \
+                 (math.factorial(self.__gridNodeSide) * math.factorial(self.__gridNodeSide * 2 - self.__gridNodeSide))
         return int(result)
 

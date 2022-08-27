@@ -9,23 +9,25 @@ from problem8 import Problem8
 from problem9 import Problem9
 from problem10 import Problem10
 from problem11 import Problem11
+from problem12 import Problem12
+from problem13 import Problem13
+
 from problem15 import Problem15
+
+__indexList = [sub.replace('Problem', '') for sub in list(filter(lambda obj: 'Problem' in obj, dir()))]
+_sortedProblemIndexes = sorted([int(i) for i in __indexList], key=int)
 
 
 class ProjectEuler:
     suite = []
 
-    def __init__(self):
-        self.suite.append(Problem1())
-        self.suite.append(Problem2())
-        self.suite.append(Problem3())
-        self.suite.append(Problem4())
-        self.suite.append(Problem5())
-        self.suite.append(Problem6())
-        self.suite.append(Problem7())
-        self.suite.append(Problem8())
-        self.suite.append(Problem9())
-        self.suite.append(Problem10())
-        self.suite.append(Problem11())
-        #
-        self.suite.append(Problem15())
+    def __init__(self, problem=-1):
+
+        if problem == -1:
+            for prIndex in _sortedProblemIndexes:
+                className = 'Problem' + str(prIndex)
+                self.suite.append(globals()[className]())
+        else:
+            if problem in _sortedProblemIndexes:
+                className = 'Problem' + str(problem)
+                self.suite.append(globals()[className]())
