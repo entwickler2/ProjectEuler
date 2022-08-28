@@ -11,7 +11,7 @@ from problem10 import Problem10
 from problem11 import Problem11
 from problem12 import Problem12
 from problem13 import Problem13
-
+from problem14 import Problem14
 from problem15 import Problem15
 
 __indexList = [sub.replace('Problem', '') for sub in list(filter(lambda obj: 'Problem' in obj, dir()))]
