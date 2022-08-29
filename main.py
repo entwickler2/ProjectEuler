@@ -28,8 +28,8 @@ if __name__ == "__main__":
         main()
     elif argLen == 2:
         argument = sys.argv[1]
-        print("Problem%s is selected for running" % sys.argv[1])
-        main(int(sys.argv[1]))
+        print("Problem%s is selected for running" % argument)
+        main(int(argument))
     else:
         print(f"Wrong argument")
 
