@@ -15,6 +15,7 @@ from problem14 import Problem14
 from problem15 import Problem15
 from problem16 import Problem16
 from problem17 import Problem17
+from problem18 import Problem18
 
 from problem20 import Problem20
 from problem21 import Problem21
@@ -31,9 +32,9 @@ class ProjectEuler:
 
         if problem == -1:
             for prIndex in _sortedProblemIndexes:
-                className = 'Problem' + str(prIndex)
-                self.suite.append(globals()[className]())
+                class_name = 'Problem' + str(prIndex)
+                self.suite.append(globals()[class_name]())
         else:
             if problem in _sortedProblemIndexes:
-                className = 'Problem' + str(problem)
-                self.suite.append(globals()[className]())
+                class_name = 'Problem' + str(problem)
+                self.suite.append(globals()[class_name]())
