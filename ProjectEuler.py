@@ -20,6 +20,7 @@ from problem19 import Problem19
 from problem20 import Problem20
 from problem21 import Problem21
 from problem22 import Problem22
+from problem23 import Problem23
 
 __indexList = [sub.replace('Problem', '') for sub in list(filter(lambda obj: 'Problem' in obj, dir()))]
 _sortedProblemIndexes = sorted([int(i) for i in __indexList], key=int)
