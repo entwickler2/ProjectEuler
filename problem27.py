@@ -21,7 +21,7 @@ class Problem27(AbsProblem, ABC):
               "that produces the maximum number of primes for consecutive values of n, starting with 0.\n"
 
     __a_range = range(-999, 1000)
-    __b_range = range(-1000, 10000 + 1)
+    __b_range = range(-1000, 1000 + 1)
     __n = 0
     __ab = {}  # key: tuple(a,b), value: max n value
 
