@@ -1,7 +1,6 @@
 # problem 27
 from abc import ABC
 from Problem import AbsProblem
-from functools import lru_cache
 
 
 class Problem27(AbsProblem, ABC):
@@ -32,7 +31,7 @@ class Problem27(AbsProblem, ABC):
     def result(self):
         for a in self.__a_range:
             for b in self.__b_range:
-                pr_amount = self.getMaxPrimeCount(a, b)
+                pr_amount = self.get_max_prime_count(a, b)
                 if pr_amount != 0:
                     self.__ab[(a, b)] = pr_amount
         max_prime_ab_values = max(zip(self.__ab.values(), self.__ab.keys()))
@@ -41,7 +40,7 @@ class Problem27(AbsProblem, ABC):
         return product_ab
 
     @staticmethod
-    def isPrime(number):
+    def is_prime(number):
         if number <= 1:
             return False
         for i in range(2, number):
@@ -51,13 +50,13 @@ class Problem27(AbsProblem, ABC):
                 pass
         return True
 
-    def getMaxPrimeCount(self, a, b):
+    def get_max_prime_count(self, a, b):
         n = -1
         count = 0
         while True:
             n += 1
             out = n ** 2 + a * n + b
-            if self.isPrime(out):
+            if self.is_prime(out):
                 count += 1
                 # print("a {0} b {1} n {0} out {1} count {2}".format(n, out, count))
                 continue
