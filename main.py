@@ -14,7 +14,7 @@ def main(problemid=-1):
         problemDesc = prob.getinfo
         print(problemDesc)
         start = time()
-        problemResult = prob.result
+        problemResult = prob.result()
         print("RESULT: " + str(problemResult))
         print("Elapsed time: %f seconds" % (time() - start))
         print("---------------------------")

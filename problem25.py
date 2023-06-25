@@ -28,15 +28,12 @@ class Problem25(AbsProblem, ABC):
     def getinfo(self):
         return self.details
 
-    @property
     def result(self):
         i = 0
         while True:
             i += 1
             num = self.__fib_calc(i)
             num_len = len(str(num))
-            # if i < 13:
-            #     print("index: {0} len: {1} num: {2}".format(i, num_len, num))
             if num_len == 1000:
                 return i
 

@@ -5,7 +5,7 @@ from functools import lru_cache
 
 
 class Problem26(AbsProblem, ABC):
-    details = "Project Euler. Problem 25:\n" \
+    details = "Project Euler. Problem 26:\n" \
               "A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions \n" \
               "with denominators 2 to 10 are given:\n" \
               "    1/2	= 	0.5\n" \
@@ -30,7 +30,6 @@ class Problem26(AbsProblem, ABC):
     def getinfo(self):
         return self.details
 
-    @property
     def result(self):
         max_len = 0
         result_den = 1
@@ -42,7 +41,7 @@ class Problem26(AbsProblem, ABC):
             # print("den: {0} len: {1} rec_cycle: {2}".format(den, rec_cycle_len, self.__recurring_cycles[den]))
             if rec_cycle_len > max_len:
                 max_len = rec_cycle_len
-                result_den = den
+                result_den = int(den)
         print("den: {0} recurring_cycle len: {1}".format(result_den, max_len))
         return result_den
 
