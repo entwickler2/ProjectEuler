@@ -7,7 +7,7 @@ class Problem5(AbsProblem):
               "remainder.\n" \
               ">>What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?"
 
-    __NUM = 20 + 1
+    __NUM = 20
 
     @property
     def getinfo(self):
@@ -17,14 +17,14 @@ class Problem5(AbsProblem):
         result = 0
         while 1:
             result += self.__NUM
-            if self.__checkNum(result):
+            if self.__check_num(result):
                 break
         return result
 
-    def __checkNum(self, result):
+    def __check_num(self, result):
         y = 0
-        for i in range(2, self.__NUM):
-            if (result % i == 0):
+        for i in range(2, self.__NUM+1):
+            if result % i == 0:
                 pass
             else:
                 return False
